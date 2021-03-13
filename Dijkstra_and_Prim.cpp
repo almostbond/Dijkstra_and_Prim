@@ -1,6 +1,7 @@
 // dijkstra_and_prim.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
 //Dijkstra code from https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
+
 //Prim code from https://www.geeksforgeeks.org/prims-algorithm-simple-implementation-for-adjacency-matrix-representation/
 
 #include <vector>
@@ -41,8 +42,11 @@ int minDistance(int dist[], bool sptSet[])
 void printSolution(int dist[])
 {
 	cout << "Vertex \t\t Distance from Source\n";
-	for (int i = 0; i < V; i++)
-		cout << i << "\t\t" << dist[i] << endl;
+	//converts from numbers into letters using the ascii decimal values.
+	for (int i = 0; i < V; i++) {
+		char c = 65 + i;
+		cout << c << "\t\t" << dist[i] << endl;
+	}
 }
 
 
